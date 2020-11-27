@@ -1,7 +1,10 @@
 import * as actionTypes from '../actions/actionTypes'
 
+const data = require('../../json/movies-in-theaters.json');
+
 const initialState = {
     showSideNavigation: false,
+    movies: data
 }
 
 const reducer = (state = initialState, action) => {

@@ -10,7 +10,6 @@ const MenuComponent = (props) => {
     const [show, setShow] = useState(false);
 
     const showDropdown = _ => setShow(!show);
-    
     const hideDropdown = _ => setShow(false);
 
     return (

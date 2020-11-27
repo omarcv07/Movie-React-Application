@@ -1,0 +1,29 @@
+.card-img-overlay-remade {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+    border-radius: calc(.25rem - 1px);
+    cursor: pointer;
+    opacity: 1;
+    transition: all .17s ease;
+    height: 100%;
+}
+
+.card-img-overlay-remade:hover {
+    background-color: rgba(15,15,15,0.7);
+    z-index: 4;
+}
+
+.card img {
+    height: 24rem;
+    cursor: pointer;
+}
+
+.card-title {
+    height: 100%;
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+}

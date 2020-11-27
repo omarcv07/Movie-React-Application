@@ -1,0 +1,25 @@
+.btn-base {
+    background-color: #ce0f0f;
+    color: #ffffff !important;
+    border-radius: 20px;
+    border: none;
+    outline: none !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-size: 15px;
+    line-height: 35px;
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+.btn-base:hover {
+    background-color: #111111;
+}
+
+.recent-login {
+    background-color: #ce0f0f;
+    color: white;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
