@@ -18,7 +18,7 @@ const Home = (props) => {
         <Fragment>
             <Row className='justify-content-center d-flex my-5'>
                 {navigationDropdownConfig.map((el, i) => (
-                    <Link to={`${el.path}`}>
+                    <Link key={i} to={`${el.path}`}>
                         <Button bsPrefix='btn-base m-1'>{el.name}</Button>
                     </Link>
                 ))}

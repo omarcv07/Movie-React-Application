@@ -1,11 +1,23 @@
 import React, { Fragment } from 'react';
+import { connect } from 'react-redux';
+import MovieProduct from '../../../components/movie-product';
 
 const Premieres = (props) => {
+    const { movies } = props;
+    
+    const premiereMovies = movies.filter((el) => el.genres.includes("Romance"))
+
     return (
         <Fragment>
-            <h2>Premieres</h2>
+            <MovieProduct 
+                movies={premiereMovies}
+            />     
         </Fragment>
     );
 }
 
-export default Premieres;
+const mapStateToProps = state => ({
+    movies: state.movies
+})
+
+export default connect(mapStateToProps)(Premieres);

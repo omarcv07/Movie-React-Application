@@ -13,8 +13,8 @@ const MovieDetails = () => {
     return (
         <Fragment>
             <Row className ='my-5'>
-                 <Col md={{ span: '6' }}>
-                    <Image src={require(`../../assets/img/${data.poster}`).default} alt="Card image"/>
+                 <Col md={{ span: '6' }} className='justify-content-center d-flex'>
+                    <Image fluid src={require(`../../assets/img/${data.poster}`).default} alt="Card image"/>
                 </Col>
                 <Col md={{ span: '6' }}>
                     <div><strong>Title:</strong> {data.title}</div>
