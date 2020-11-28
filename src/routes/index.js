@@ -10,6 +10,9 @@ import Premieres from '../container/pages/premieres/index'
 // Movie Details 
 import MovieDetails from '../components/movie-details/index'
 
+// Movie searched
+import SearchMovies from '../components/movie-search/index'
+
 // Categories
 import ActionCategory from '../container/pages/categories/action/index';
 import FantasyCategory from '../container/pages/categories/fantasy/index';
@@ -46,6 +49,10 @@ export const routes = [
     {
         path: "/search/label/movie/:movieId",
         component: MovieDetails
+    },
+    {
+        path: "/search/label/movies/:movieName",
+        component: SearchMovies
     },
     {
         name: "Action",

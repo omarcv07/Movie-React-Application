@@ -4,16 +4,16 @@ import {
     Row,
     Col,
 } from 'react-bootstrap';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { navigationDropdownConfig } from '../../../config/navigationConfig';
 import { Link } from 'react-router-dom';
 import MovieProduct from '../../../components/movie-product';
 
 import './index.css'
 
-const Home = (props) => {
-    const { movies } = props;
-    
+const Home = () => {
+    const movies = useSelector(state => state.movies);
+
     return (
         <Fragment>
             <Row className='justify-content-center d-flex my-5'>
@@ -35,8 +35,4 @@ const Home = (props) => {
     );
 }
 
-const mapStateToProps = state => ({
-    movies: state.movies
-})
-
-export default connect(mapStateToProps)(Home);
+export default Home;

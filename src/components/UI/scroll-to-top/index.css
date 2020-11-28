@@ -2,16 +2,17 @@
     position: fixed;
     bottom: 20px;
     align-items: center;
-    height: 4rem !important;
-    width: 4rem !important;
+    height: 3rem !important;
+    width: 3rem !important;
     justify-content: center;
     z-index: 1000;
     cursor: pointer;
     animation: fadeIn 0.3s;
     transition: opacity 0.4s;
-    color: black !important;
-    background: white;
+    color: white !important;
+    background: black;
     border-radius: 50%;
+    right: 0;
   }
   
   .scrollTop:hover{

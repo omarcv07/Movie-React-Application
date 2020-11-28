@@ -1,17 +1,16 @@
 import React, { Fragment } from 'react';
-import EmptyCategoryPage from '../../../../components/empty-page/index'
-import MovieProduct from '../../../../components/movie-product/index'
-import { connect } from 'react-redux';
+import EmptyCategoryPage from '../../../../components/empty-page/index';
+import MovieProduct from '../../../../components/movie-product/index';
+import { useSelector } from 'react-redux';
 
-const AnimationCategory = (props) => {
-    const { animationMovies } = props;
+const AnimationCategory = () => {
+    const animationMovies = useSelector(state => state.movies)
 
     let movies = <EmptyCategoryPage />
 
     if (animationMovies) {
-        const animation = animationMovies.filter((el) => el.genres.includes("Animation"))
-
-        movies = <MovieProduct movies={animation}/>
+        const animation = animationMovies.filter((el) => el.genres.includes("Animation"));
+        movies = <MovieProduct movies={animation} />
     }
     
     return (
@@ -21,8 +20,4 @@ const AnimationCategory = (props) => {
     );
 }
 
-const mapStateToProps = state => ({
-    animationMovies: state.movies
-})
-
-export default connect(mapStateToProps)(AnimationCategory);
+export default AnimationCategory;

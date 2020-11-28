@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import MovieProduct from '../../../components/movie-product';
 
-const AdultAge = (props) => {
-    const { movies } = props;
+const AdultAge = () => {
+    const movies = useSelector(state => state.movies)
 
     const adultMovies = movies.filter((el) => el.genres.includes("Crime"));
 
@@ -16,8 +16,4 @@ const AdultAge = (props) => {
     );
 }
 
-const mapStateToProps = state => ({
-    movies: state.movies
-})
-
-export default connect(mapStateToProps)(AdultAge);
+export default AdultAge;

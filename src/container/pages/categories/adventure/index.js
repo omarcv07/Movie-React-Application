@@ -1,17 +1,16 @@
 import React, { Fragment } from 'react';
-import EmptyCategoryPage from '../../../../components/empty-page/index'
-import MovieProduct from '../../../../components/movie-product/index'
-import { connect } from 'react-redux';
+import EmptyCategoryPage from '../../../../components/empty-page/index';
+import MovieProduct from '../../../../components/movie-product/index';
+import { useSelector } from 'react-redux';
 
-const AdventureCategory = (props) => {
-    const { adventureMovies } = props;
+const AdventureCategory = () => {
+    const adventureMovies = useSelector(state => state.movies);
 
     let movies = <EmptyCategoryPage />
 
     if (adventureMovies) {
-        const adventure = adventureMovies.filter((el) => el.genres.includes("Adventure"))
-
-        movies = <MovieProduct movies={adventure}/>
+        const adventure = adventureMovies.filter((el) => el.genres.includes("Adventure"));
+        movies = <MovieProduct movies={adventure} />
     }
     
     return (
@@ -21,8 +20,4 @@ const AdventureCategory = (props) => {
     );
 }
 
-const mapStateToProps = state => ({
-    adventureMovies: state.movies
-})
-
-export default connect(mapStateToProps)(AdventureCategory);
+export default AdventureCategory;

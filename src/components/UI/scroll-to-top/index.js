@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import * as Icon from 'react-feather';
-import './index.css';
 
+import './index.css';
 
 const ScrollArrow = () =>{
 

@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import MovieProduct from '../../../components/movie-product';
 
-const Premieres = (props) => {
-    const { movies } = props;
+const Premieres = () => {
+    const movies = useSelector(state => state.movies)
     
     const premiereMovies = movies.filter((el) => el.genres.includes("Romance"));
 
@@ -16,8 +16,4 @@ const Premieres = (props) => {
     );
 }
 
-const mapStateToProps = state => ({
-    movies: state.movies
-})
-
-export default connect(mapStateToProps)(Premieres);
+export default Premieres;

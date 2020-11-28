@@ -1,17 +1,16 @@
 import React, { Fragment } from 'react';
-import EmptyCategoryPage from '../../../../components/empty-page/index'
-import MovieProduct from '../../../../components/movie-product/index'
-import { connect } from 'react-redux';
+import EmptyCategoryPage from '../../../../components/empty-page/index';
+import MovieProduct from '../../../../components/movie-product/index';
+import { useSelector } from 'react-redux';
 
-const MusicalCategory = (props) => {
-    const { musicalMovies } = props;
+const MusicalCategory = () => {
+    const musicalMovies = useSelector(state => state.movies);
 
     let movies = <EmptyCategoryPage />
 
     if (musicalMovies) {
         const musical = musicalMovies.filter((el) => el.genres.includes("Musical"))
-
-        movies = <MovieProduct movies={musical}/>
+        movies = <MovieProduct movies={musical} />
     }
     
     return (
@@ -21,8 +20,4 @@ const MusicalCategory = (props) => {
     );
 }
 
-const mapStateToProps = state => ({
-    musicalMovies: state.movies
-});
-
-export default connect(mapStateToProps)(MusicalCategory);
+export default MusicalCategory;
