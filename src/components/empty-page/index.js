@@ -5,7 +5,7 @@ const EmptyCategoryPage = () => {
     return (
         <Fragment>
             <Row className='text-center my-5'>
-                <Col><h5>No result found</h5></Col>
+                <Col><h5>No results found</h5></Col>
             </Row>
         </Fragment>
     );
