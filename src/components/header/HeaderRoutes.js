@@ -20,7 +20,7 @@ const MenuComponent = () => {
                 onMouseLeave={hideDropdown}
                 >
                 {navigationDropdownConfig.map((dropItem, i) => (
-                    <NavItem linkTo={`${dropItem.path}`}>{dropItem.name}</NavItem>
+                    <NavItem key={i} linkTo={`${dropItem.path}`}>{dropItem.name}</NavItem>
                 ))}
             </NavDropdown>
 
