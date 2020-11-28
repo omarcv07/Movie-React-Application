@@ -13,7 +13,7 @@ const MovieProduct = (props) => {
     const { movies } = props;
 
     const sendData = async movie => {
-        const movieId = window.encodeURIComponent(movie.id);
+        const movieId = movie.title;
 
         history.push({
             pathname: '/search/label/movie/' + movieId,

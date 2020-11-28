@@ -14,7 +14,7 @@ import {
 } from 'react-bootstrap';
 import * as Icon from 'react-feather';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import logoMovie from '../../assets/logo-website.png';
 
 import './index.css';
@@ -39,7 +39,7 @@ const Header = () => {
                 <Container bsPrefix='container-fluid container-lg'>
 
                     <Col xs={{ span: '7' }} md={{ span: '3' }} className='justify-content-center justify-content-lg-start d-flex'>
-                        <Navbar.Brand href='/home'><Image src={logoMovie} fluid /></Navbar.Brand>
+                        <Link to='/home'><Image src={logoMovie} fluid /></Link>
                     </Col>
                     
                     <Col xs={{ span: '2', order: 'first' }} className='d-lg-none'>
