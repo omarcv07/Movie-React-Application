@@ -5,7 +5,7 @@ import MovieProduct from '../../../components/movie-product';
 const Premieres = (props) => {
     const { movies } = props;
     
-    const premiereMovies = movies.filter((el) => el.genres.includes("Romance"))
+    const premiereMovies = movies.filter((el) => el.genres.includes("Romance"));
 
     return (
         <Fragment>

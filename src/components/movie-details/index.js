@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment } from 'react';
 import { Col, Image, Row } from 'react-bootstrap';
 import { useLocation } from "react-router-dom";
 
@@ -6,9 +6,7 @@ import './index.css'
 
 const MovieDetails = () => {
     const location = useLocation();
-    const data = location.state.movie
-
-    console.log(data)
+    const data = location.state.movie;
 
     return (
         <Fragment>

@@ -5,7 +5,7 @@ import MovieProduct from '../../../components/movie-product';
 const AdultAge = (props) => {
     const { movies } = props;
 
-    const adultMovies = movies.filter((el) => el.genres.includes("Crime"))
+    const adultMovies = movies.filter((el) => el.genres.includes("Crime"));
 
     return (
         <Fragment>

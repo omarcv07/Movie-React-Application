@@ -2,10 +2,9 @@ import React, { Fragment, useState } from 'react';
 
 import NavItem from './HeaderItem';
 import { NavDropdown } from 'react-bootstrap';
+import { navigationConfig, navigationDropdownConfig } from '../../config/navigationConfig';
 
-import { navigationConfig, navigationDropdownConfig } from '../../config/navigationConfig'
-
-const MenuComponent = (props) => {
+const MenuComponent = () => {
 
     const [show, setShow] = useState(false);
 
@@ -21,9 +20,7 @@ const MenuComponent = (props) => {
                 onMouseLeave={hideDropdown}
                 >
                 {navigationDropdownConfig.map((dropItem, i) => (
-                    <NavDropdown.Item key={i} href={`${dropItem.path}`}>
-                        {dropItem.name}
-                    </NavDropdown.Item>
+                    <NavItem linkTo={`${dropItem.path}`}>{dropItem.name}</NavItem>
                 ))}
             </NavDropdown>
 

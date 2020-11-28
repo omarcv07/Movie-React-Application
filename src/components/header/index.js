@@ -35,7 +35,7 @@ const Header = (props) => {
 
                     <Col xs={{ span: '2' }} lg={{ order: 'last' }} className='justify-content-end d-flex'>
                         <Button 
-                            bsPrefix="btn text-white shadow-none"
+                            bsPrefix='btn text-white shadow-none'
                             onClick={() => setOpen(!open)}
                             aria-expanded={open}
                             >
@@ -46,9 +46,9 @@ const Header = (props) => {
                     <Col lg={{ span: '5', order: 1 }}>
                         <Collapse in={open}>
                             <InputGroup>
-                                <FormControl size="md" type="text" placeholder="Search" className="mr-sm-2" />
+                                <FormControl size='md' type='text' placeholder='Search' className='mr-sm-2' />
                                 <InputGroup.Append>
-                                    <Button variant="danger">Search</Button>
+                                    <Button variant='danger'>Search</Button>
                                 </InputGroup.Append>
                             </InputGroup >
                         </Collapse>
