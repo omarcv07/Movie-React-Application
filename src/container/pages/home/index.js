@@ -25,7 +25,7 @@ const Home = () => {
             </Row>
 
             <Col xs={{ span: 12 }} className='p-3 recent-login mb-2'>
-                Recent Logins
+                New Arrivals
             </Col>
 
             <MovieProduct 

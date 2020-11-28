@@ -8,13 +8,17 @@
     color: #ffffff !important;
 }
 
-.navbar .dropdown-item {
+.navbar .dropdown .nav-link {
     font-size: 1rem;
 }
 
+.navbar .dropdown .dropdown-menu .nav-link:hover {
+    background-color: #ce0f0f;
+    color: #ffffff;
+}
+
 .navbar .dropdown-menu .nav-link,
-.navbar .dropdown-menu,
-.navbar .dropdown-item:hover {
+.navbar .dropdown-menu {
     background-color: black;
 }
 
