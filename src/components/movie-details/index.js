@@ -6,6 +6,7 @@ const MovieDetails = () => {
     const location = useLocation();
     const data = location.state.movie;
 
+
     return (
         <Fragment>
             <Row className ='my-5'>
@@ -14,9 +15,9 @@ const MovieDetails = () => {
                 </Col>
                 <Col md={{ span: '6' }}>
                     <div><strong>Title:</strong> {data.title}</div>
-                    <div><strong>Genders:</strong> {data.genres}</div>
+                    <div><strong>Genders:</strong> {data.genres.join(", ")}</div>
                     <div><strong>Duration:</strong> {data.duration}</div>
-                    <div><strong>Actors:</strong> {data.actors}</div>
+                    <div><strong>Actors:</strong> {data.actors.join(", ")}</div>
                     <div><strong>Release:</strong> {data.releaseDate}</div>
                     {data.storyline ? <div><strong>Sinopsis:</strong> {data.storyline}</div> : null}
                 </Col>
