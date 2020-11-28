@@ -19,7 +19,7 @@ import logoMovie from '../../assets/logo-website.png';
 
 import './index.css';
 
-const Header = (props) => {
+const Header = () => {
     const history = useHistory();
     const dispatch = useDispatch();
     const [open, setOpen] = useState(false);
